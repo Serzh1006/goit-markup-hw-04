@@ -89,6 +89,7 @@ img {
 .nav-list-item {
 }
 .nav-list-item-link {
+  position: relative;
   padding: 24px 0;
   font-weight: 500;
   line-height: 1.5;
@@ -99,6 +100,21 @@ img {
 
 .nav-list-item-link:hover,
 .nav-list-item-link:focus {
+  color: var(--ocean);
+}
+
+.active::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--ocean);
+}
+
+.active-color {
   color: var(--ocean);
 }
 
@@ -130,8 +146,19 @@ img {
 /*---------- hero ----------*/
 
 .hero-section {
+  width: 1440px;
+  height: 600px;
+  margin: 0 auto;
   padding: 188px 0;
   background-color: var(--navy-blue);
+  background-image: linear-gradient(
+      to right,
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url("../images/people-office.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 .hero-title {
   max-width: 496px;
@@ -189,6 +216,36 @@ img {
 .advan-list-item {
   width: calc((1128px - 24px * 3) / 4);
 }
+
+.advan-list-item::before {
+  display: block;
+  content: "";
+  width: 264px;
+  height: 112px;
+  margin-bottom: 8px;
+  border-radius: 4px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid var(--light-slate);
+  background-color: var(--cloud);
+}
+
+.icon-antena::before {
+  background-image: url("../images/antenna.svg");
+}
+
+.icon-clock::before {
+  background-image: url("../images/clock.svg");
+}
+
+.icon-diagram::before {
+  background-image: url("../images/diagram.svg");
+}
+
+.icon-astronaut::before {
+  background-image: url("../images/astronaut.svg");
+}
+
 .advan-list-item-title {
   margin-bottom: 8px;
   font-weight: 500;
@@ -246,8 +303,29 @@ img {
   color: var(--navy-blue);
 }
 .team-list-item-text {
+  margin-bottom: 8px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.social-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  list-style: none;
+}
+.social-item {
+  width: 40px;
+  height: 40px;
+}
+.soc-item-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: var(--iris);
 }
 
 /*---------- portfolio ----------*/
