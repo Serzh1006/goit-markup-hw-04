@@ -232,7 +232,6 @@ img {
 .advan-list-icons {
   display: flex;
   gap: 24px;
-  margin-bottom: 8px;
   list-style: none;
 }
 
@@ -242,6 +241,7 @@ img {
   align-items: center;
   width: 264px;
   height: 112px;
+  margin-bottom: 8px;
   border-radius: 4px;
   border: 1px solid var(--light-slate);
   background-color: var(--cloud);
@@ -445,17 +445,19 @@ img {
 
 .footer-container {
   display: flex;
-  gap: 120px;
+  align-items: baseline;
 }
 
-.social-title {
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 24px;
-  letter-spacing: 0.32px;
-  color: var(--WHITE, #fff);
+.soc-f {
+  gap: 16px;
+}
 
+.social-text {
   margin-bottom: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: var(--WHITE, #fff);
 }
 
 .f-social-link:hover,
@@ -466,6 +468,10 @@ img {
 .footer-logo {
   margin-bottom: 16px;
   margin-right: 0;
+}
+
+.first-wrap-f {
+  margin-right: 120px;
 }
 
 .footer-logo-web {
